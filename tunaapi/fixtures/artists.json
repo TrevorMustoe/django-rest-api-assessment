@@ -1,0 +1,20 @@
+[
+  {
+    "model": "tunaapi.artists",
+    "pk": 1,
+    "fields": {
+          "name": "John Coltrane",
+          "age": 98,
+          "bio": "John William Coltrane (September 23, 1926 July 17, 1967) was an American jazz saxophonist, bandleader and composer. He is among the most influential and acclaimed figures in the history of jazz and 20th-century music."
+    }
+},
+  {
+    "model": "tunaapi.artists",
+    "pk": 2,
+    "fields": {
+          "name": "John Cena",
+          "age": 47,
+          "bio": "You can't see me"
+    }
+}
+]
