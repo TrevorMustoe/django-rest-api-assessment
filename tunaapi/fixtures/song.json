@@ -1,0 +1,22 @@
+[
+  {
+    "model": "tunaapi.song",
+    "pk": 1,
+    "fields": {
+          "title": "Giant Steps",
+          "artist": 1,
+          "album": "Giant Steps",
+          "length": "286"
+    }
+},
+  {
+    "model": "tunaapi.song",
+    "pk": 2,
+    "fields": {
+         "title": "I never back down, I never quit",
+          "artist": 2,
+          "album": "SEE ME?",
+          "length": "100"
+    }
+}
+]
