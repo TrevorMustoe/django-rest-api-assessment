@@ -1,5 +1,6 @@
 """Artists database model module"""
 from django.db import models
+from rest_framework.decorators import action
 
 
 class Artists(models.Model):

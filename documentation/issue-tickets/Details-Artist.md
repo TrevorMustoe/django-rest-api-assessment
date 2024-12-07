@@ -1,7 +1,15 @@
 # Retrieve details of a single artist with associated songs
 
 ## Description
-This ticket requests the implementation of a route that retrieves the details of a single artist, including the songs associated with them.
+This ticket requests the implementation of a route that retrieves the details of a single artist, including the songs associated with them.\
+
+# TM NOTES:
++ I will have to create a custom model and include the following informatation: 
+ - songs
+ - song count * 
+
+ * song count will have to refer to this optional assisment here: 
+  https://github.com/nashville-software-school/server-side-python-curriculum/blob/evening-cohorts/book-3-levelup/chapters/EVENTS_PER_GAME.md
 
 ## Request
 - **Method:** GET

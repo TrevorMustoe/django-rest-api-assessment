@@ -3,6 +3,12 @@
 ## Description
 This ticket requests the implementation of a route that retrieves the details of a single song, including its associated genres and artist details.
 
+# TM NOTES:
++ For this I will have to create my own custom models for songs to get the info
++ Need to add to Song model the following:
+  - artists
+  - genres
+
 ## Request
 - **Method:** GET
 - **Path:** /songs/{songId}

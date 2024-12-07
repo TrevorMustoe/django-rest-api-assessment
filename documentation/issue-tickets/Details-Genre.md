@@ -3,6 +3,10 @@
 ## Description
 This ticket requests the implementation of a route that retrieves the details of a single genre, including the songs associated with it.
 
+# TM TODO:
+ + Need to create a custom model to get the following information:
+  - songs
+
 ## Request
 - **Method:** GET
 - **Path:** /genres/{genreId}
