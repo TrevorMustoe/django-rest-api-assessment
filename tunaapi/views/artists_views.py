@@ -1,9 +1,10 @@
 """View module for handling requests about artists"""
 from django.http import HttpResponseServerError
+from rest_framework.decorators import action
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from tunaapi.models import Artists
+from tunaapi.models import Artists, Song
 
 
 class ArtistsView(ViewSet):
@@ -28,7 +29,23 @@ class ArtistsView(ViewSet):
         
         artists = Artists.objects.all()
         serializer = ArtistsSerializer(artists, many=True)
-        return Response(serializer.data)   
+        return Response(serializer.data)
+    
+    def create(self, request):
+        """Handle POST operations
+
+        Returns
+            Response -- JSON serialized artist instance
+        """
+
+        artist = Artists.objects.create(
+            name=request.data["name"],
+            age=request.data["age"],
+            bio=request.data["bio"],
+        )
+        serializer = ArtistsSerializer(artist)
+        return Response(serializer.data)
+    
 class ArtistsSerializer(serializers.ModelSerializer):
     """JSON serializer for artists
     """

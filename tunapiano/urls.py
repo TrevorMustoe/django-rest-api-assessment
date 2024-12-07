@@ -17,12 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
 from rest_framework import routers
-from tunaapi.views import ArtistsView, GenreView, SongView
+from tunaapi.views import ArtistsView, GenreView, SongView, Song_GenreView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'artists', ArtistsView, 'artists')
 router.register(r'genre', GenreView, 'genre')
 router.register(r'song', SongView, 'song')
+router.register(r'song_genre', Song_GenreView, 'song_genre')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

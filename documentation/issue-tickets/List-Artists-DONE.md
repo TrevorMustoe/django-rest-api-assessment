@@ -1,3 +1,5 @@
+# DONE
+
 # Retrieve a list of all artists
 
 ## Description

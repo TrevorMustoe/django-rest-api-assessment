@@ -3,6 +3,9 @@
 ## Description
 This ticket requests the implementation of a route that retrieves a list of popular genres based on the number of songs associated with each genre.
 
+# TM TODO:
+ + Create or add to existing custom model that will GET the song count for each genre
+
 ## Request
 - **Method:** GET
 - **Path:** /genres/popular
