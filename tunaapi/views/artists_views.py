@@ -16,9 +16,13 @@ class ArtistsView(ViewSet):
         Returns:
             Response -- JSON serialized artists
         """
-        artists = Artists.objects.get(pk=pk)
-        serializer = ArtistsSerializer(artists)
-        return Response(serializer.data)
+        
+        try:      
+            artists = Artists.objects.get(pk=pk)
+            serializer = ArtistsDetailsSerializer(artists)
+            return Response(serializer.data)
+        except Artists.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
     def list(self, request):
         """Handle GET requests to get all artistss
@@ -73,3 +77,12 @@ class ArtistsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Artists
         fields = ('id', 'name', 'age', 'bio')
+
+class ArtistsDetailsSerializer(serializers.ModelSerializer):
+    """JSON serializer for artist types
+    """
+    class Meta:
+        model = Artists
+        fields = ('id', 'name', 'age', 'bio', 'song')
+        depth = 1
+        db_table = 'song'
