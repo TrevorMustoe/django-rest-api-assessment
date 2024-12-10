@@ -7,5 +7,5 @@ from .genre import Genre
 class Song_Genre(models.Model):
     """Database model for keeping track of which songs belong to which genre"""
     # this song_id is the key from Song ID entity
-    song_id =  models.ForeignKey(Song, on_delete=models.CASCADE)
-    genre_id =  models.ForeignKey(Genre, on_delete=models.CASCADE)
+    song_id =  models.ForeignKey(Song, on_delete=models.CASCADE, related_name='song_id')
+    genre_id =  models.ForeignKey(Genre, on_delete=models.CASCADE, related_name='genre_id')
