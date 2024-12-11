@@ -1,6 +1,6 @@
 [
   {
-    "model": "tunaapi.artists",
+    "model": "tunaapi.artist",
     "pk": 1,
     "fields": {
           "name": "John Coltrane",
@@ -9,7 +9,7 @@
     }
 },
   {
-    "model": "tunaapi.artists",
+    "model": "tunaapi.artist",
     "pk": 2,
     "fields": {
           "name": "John Cena",
