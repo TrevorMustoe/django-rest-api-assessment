@@ -1,12 +1,11 @@
-"""Song database model module"""
 from django.db import models
-from .artists import Artists
+from .artist import Artist
 
 
 class Song(models.Model):
-    """Database model for keeping track of songs"""
-    title = models.CharField(max_length=50)
-    # this artist_id is the key from artist ID
-    artist =  models.ForeignKey(Artists, on_delete=models.CASCADE, related_name='song')
-    album = models.CharField(max_length=50) 
-    length = models.CharField(max_length=50) 
+
+    title = models.TextField(max_length=60)
+    artist = models.ForeignKey(Artist, on_delete=models.CASCADE, null=False, related_name='songs')
+    album = models.TextField(max_length=80)
+    length = models.IntegerField(max_length=270)
+    
